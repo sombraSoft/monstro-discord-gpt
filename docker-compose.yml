@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  monstro:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: monstro:latest
+    container_name: monstro
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - BOT_TOKEN=MTA5NzA3MjgxODM5MjQxNjI3Nw.G2jrpk.-m5t-thGRMrLyqaR4iH_eBzY0FShxzeSQQD004
+      - OPENAI_API_KEY=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
+      - OWNER_NAME=Sombrio
